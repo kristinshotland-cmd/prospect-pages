@@ -8,6 +8,72 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<style id="ups-theme">
+/* ===== UPS brand theme (page-specific override; shared style.css untouched) ===== */
+:root{
+  --coral:#4B2E1E;        /* UPS Pullman brown — solid accents + primary buttons */
+  --coral-dark:#361F14;   /* darker brown — hover */
+  --coral-soft:#F3E9D7;   /* warm tan — eyebrow bg */
+}
+.eyebrow::before{ background:#C8901E; box-shadow:0 0 0 4px rgba(200,144,30,0.22); }
+
+/* gold→brown gradients on light backgrounds */
+h1.hero-title .grad{
+  background:linear-gradient(92deg,#9A6400 0%,#C0871A 45%,#4B2E1E 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.section-title em, .proof-stat .accent{
+  background:linear-gradient(92deg,#9A6400 0%,#4B2E1E 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.btn-primary{ box-shadow:0 1px 2px rgba(75,46,30,0.18), 0 6px 16px rgba(75,46,30,0.28); }
+
+/* Consolidate visual (was pink) → warm tan + gold AI badge */
+.visual-1{ background:linear-gradient(135deg,#F6ECD9 0%,#ECD9B4 60%,#E0C68C 100%); }
+.ai-badge{ background:linear-gradient(135deg,#C8901E,#8B5A2B); }
+.funnel-ai{ box-shadow:0 2px 8px rgba(139,90,43,0.18); }
+
+/* Bridge visual (was blue) → amber tonal */
+.visual-2{ background:linear-gradient(135deg,#FBF1DC 0%,#F2DCA6 60%,#E7C77B 100%); }
+.rbar.b1{ background:#6B4A2B; } .rbar.b2{ background:#9A6B30; }
+.rbar.b3{ background:#C2913F; } .rbar.b4{ background:#E0C081; }
+.roadmap-foot{ color:#6B4A2B; }
+.progress-row{ box-shadow:0 1px 3px rgba(107,74,43,0.15); }
+.pbar{ background:#EFE3CC; }
+.pbar::after{ background:linear-gradient(90deg,#9A6B30,#C2913F); }
+.pbar-pct{ color:#6B4A2B; }
+
+/* Unify visual (was purple) → brown / gold / amber */
+.visual-3{ background:linear-gradient(135deg,#F4EAD8 0%,#E7CF9E 60%,#D8B873 100%); }
+.unify-rail{ background:linear-gradient(180deg,#4B2E1E 0%,#9A6B30 50%,#C8901E 100%); }
+.ut-exec{ background:#4B2E1E; } .ut-pm{ background:#9A6B30; } .ut-gtm{ background:#C8901E; }
+.ubar.filled.exec{ background:#4B2E1E; } .ubar.filled.pm{ background:#9A6B30; } .ubar.filled.gtm{ background:#C8901E; }
+.unify-row{ box-shadow:0 1px 3px rgba(75,46,30,0.12); }
+
+/* Proof featured (dark) card → deep brown + gold accents */
+.proof-card.feat{ background:linear-gradient(150deg,#3A2317 0%,#23150D 100%); border-color:#4B2E1E; }
+.proof-card.feat::before{ background:radial-gradient(circle, rgba(255,181,0,0.20) 0%, transparent 70%); }
+.proof-card.feat .proof-company{ color:#FFB500; }
+.proof-quote{ border-left-color:#FFB500; }
+.proof-card.feat .proof-stat .accent{
+  background:linear-gradient(92deg,#FFB500 0%,#E0912B 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+
+/* CTA section → UPS brown with gold glow + gold button */
+.cta-wrap{ background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,181,0,0.18) 0%, transparent 70%), linear-gradient(180deg,#3A2317 0%,#23150D 100%); }
+.cta-eyebrow{ color:#FFB500; border-color:rgba(255,181,0,0.40); background:rgba(255,181,0,0.08); }
+.cta-title em{
+  background:linear-gradient(92deg,#FFB500 0%,#E0912B 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.cta-btn{ background:#FFB500; color:#2E1B11; box-shadow:0 1px 3px rgba(0,0,0,0.25), 0 12px 36px rgba(255,181,0,0.35); }
+.cta-btn:hover{ background:#E6A200; }
+
+/* footer → deep brown */
+footer{ background:#23150D; }
+footer a:hover{ color:#FFB500; }
+</style>
 </head>
 <body>
 
