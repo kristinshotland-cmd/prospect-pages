@@ -8,6 +8,76 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+
+<style id="stjude-theme">
+/* ===== St. Jude / ALSAC theme — scoped to this page only ===== */
+:root{
+  --coral:#D01840;        /* St. Jude crimson, sampled from the ALSAC mark */
+  --coral-dark:#A4122F;
+  --coral-soft:#FCE7EC;
+}
+/* display gradient text -> crimson -> St. Jude gold */
+h1.hero-title .grad{
+  background:linear-gradient(92deg,#D01840 0%,#E8542A 45%,#F4A81D 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.section-title em,
+.proof-stat .accent,
+.cta-title em{
+  background:linear-gradient(92deg,#D01840 0%,#F4A81D 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.ai-badge{ background:linear-gradient(135deg,#D01840,#A4122F); }
+/* Consolidate card wash -> light crimson (cards 2 & 3 keep their data-viz blues/purples) */
+.visual-1{ background:linear-gradient(135deg,#FCE7EC 0%,#F7CBD6 60%,#F2B3C2 100%); }
+.funnel-ai{ box-shadow:0 2px 8px rgba(208,24,64,0.12); }
+/* dark-section accents -> St. Jude gold */
+.proof-card.feat .proof-company{ color:#F4A81D; }
+.cta-eyebrow{ color:#F4A81D; border-color:rgba(208,24,64,0.35); }
+/* glows -> crimson */
+.proof-card.feat::before{ background:radial-gradient(circle, rgba(208,24,64,0.24) 0%, transparent 70%); }
+.cta-wrap{ background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(208,24,64,0.22) 0%, transparent 70%), linear-gradient(180deg,#0E0F12 0%,#16181E 100%); }
+/* button shadows -> crimson tint (button fills already follow --coral) */
+.btn-primary{ box-shadow:0 1px 2px rgba(208,24,64,0.16), 0 6px 16px rgba(208,24,64,0.24); }
+.cta-btn{ box-shadow:0 1px 3px rgba(208,24,64,0.24), 0 12px 36px rgba(208,24,64,0.40); }
+
+/* ===== Airtable x Jira — Better Together band ===== */
+.bt{ padding:96px 0; border-bottom:1px solid var(--border-2);
+     background:linear-gradient(180deg,#FFF8F3 0%, #FCEEE9 100%); }
+.bt-grid{ display:grid; grid-template-columns:1.08fr 0.92fr; gap:44px; align-items:center; }
+.bt-eyebrow{ display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px;
+  background:var(--coral-soft); color:var(--coral); font-size:12px; font-weight:600;
+  letter-spacing:0.04em; text-transform:uppercase; margin-bottom:20px; }
+.bt-eyebrow::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--coral);
+  box-shadow:0 0 0 4px rgba(208,24,64,0.18); }
+.bt-title{ font-size:clamp(30px,3.7vw,46px); font-weight:700; letter-spacing:-0.025em;
+  line-height:1.13; color:var(--ink); }
+.bt-title em{ font-style:italic; background:linear-gradient(92deg,#D01840 0%,#F4A81D 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  display:inline-block; padding:0.02em 0.14em 0.08em 0.06em; margin:0 -0.06em; }
+.bt-lede{ margin-top:20px; font-size:17px; line-height:1.6; color:var(--muted); max-width:560px; }
+.bt-points{ margin-top:24px; list-style:none; display:flex; flex-direction:column; gap:13px; }
+.bt-points li{ position:relative; padding-left:30px; font-size:15px; color:var(--ink);
+  font-weight:500; line-height:1.45; }
+.bt-points li::before{ content:'✓'; position:absolute; left:0; top:1px; width:19px; height:19px;
+  border-radius:50%; background:var(--coral); color:#fff; font-size:11px; font-weight:800;
+  display:flex; align-items:center; justify-content:center; }
+.bt-card{ background:linear-gradient(150deg,#0E0F12 0%,#1B1D24 100%); border:1px solid #22252C;
+  border-radius:20px; padding:32px; color:#fff; position:relative; overflow:hidden; min-height:296px;
+  display:flex; flex-direction:column; justify-content:space-between; gap:18px; }
+.bt-card::before{ content:''; position:absolute; top:-32%; right:-12%; width:300px; height:300px;
+  background:radial-gradient(circle, rgba(208,24,64,0.26) 0%, transparent 70%); pointer-events:none; }
+.bt-card-tag{ font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+  color:#F4A81D; position:relative; }
+.bt-card-stat{ font-size:clamp(25px,2.7vw,33px); font-weight:800; letter-spacing:-0.02em;
+  line-height:1.14; position:relative; }
+.bt-card-stat .accent{ background:linear-gradient(92deg,#F0436A 0%,#F4A81D 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.bt-card-body{ font-size:14.5px; line-height:1.58; color:rgba(255,255,255,0.72); position:relative; }
+.bt-card-meta{ font-size:12px; color:rgba(255,255,255,0.5); font-weight:500; letter-spacing:0.02em;
+  position:relative; padding-top:14px; border-top:1px solid rgba(255,255,255,0.1); }
+@media (max-width:900px){ .bt-grid{ grid-template-columns:1fr; gap:28px; } .bt{ padding:64px 0; } }
+</style>
 </head>
 <body>
 
@@ -202,6 +272,30 @@
         <div class="feature-num">03 · UNIFY</div>
         <div class="feature-title">One source of truth. Every view, for every team.</div>
         <div class="feature-body">Execs see portfolio health. PMs see the sprint. GTM sees launches. One system — every team sees exactly what matters to them, in real time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bt" id="jira">
+  <div class="wrap">
+    <div class="bt-grid">
+      <div class="bt-copy">
+        <span class="bt-eyebrow">Airtable × Jira — better together</span>
+        <h2 class="bt-title">Strategy lives in Airtable. Execution stays in <em>Jira</em>.</h2>
+        <p class="bt-lede">Your engineers keep shipping in Jira. Airtable sits on top as the portfolio and planning layer — two-way sync, no re-keying, no swivel-chair between systems. For a team modernizing the site platform with delivery in Jira, product strategy and execution finally share one source of truth.</p>
+        <ul class="bt-points">
+          <li>Two-way Jira sync — epics, status, and timelines stay live in both systems</li>
+          <li>Dozens of programs roll up into a single executive portfolio view</li>
+          <li>Retire the manual roll-ups and status decks between strategy and sprint</li>
+        </ul>
+      </div>
+      <div class="bt-card">
+        <div class="bt-card-tag">Better Together in the wild</div>
+        <div class="bt-card-stat">Dozens of programs.<br><span class="accent">One executive view.</span></div>
+        <div class="bt-card-body">A Fortune 100 global enterprise is layering Airtable over Jira right now — engineering stays in Jira while operations, digital, and platform programs roll up into one live portfolio for VPs and the C-suite, consolidating work that used to sprawl across a legacy PPM platform, Jira exports, and hand-built status decks.</div>
+        <div class="bt-card-meta">Fortune 100 global enterprise · Airtable + Jira, live today</div>
       </div>
     </div>
   </div>
