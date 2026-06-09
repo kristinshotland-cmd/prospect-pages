@@ -76,7 +76,15 @@ h1.hero-title .grad{
 .bt-card-body{ font-size:14.5px; line-height:1.58; color:rgba(255,255,255,0.72); position:relative; }
 .bt-card-meta{ font-size:12px; color:rgba(255,255,255,0.5); font-weight:500; letter-spacing:0.02em;
   position:relative; padding-top:14px; border-top:1px solid rgba(255,255,255,0.1); }
-@media (max-width:900px){ .bt-grid{ grid-template-columns:1fr; gap:28px; } .bt{ padding:64px 0; } }
+/* ===== Personal congratulations note (hero top) ===== */
+.congrats{ display:flex; gap:14px; align-items:flex-start; max-width:720px; margin:0 0 30px;
+  padding:16px 20px; border-radius:14px;
+  background:linear-gradient(135deg,#FCEFE9 0%, #FCE7EC 100%); border:1px solid #F3C9D3; }
+.congrats-ic{ flex-shrink:0; line-height:1; padding-top:2px; }
+.congrats-body{ font-size:14.5px; line-height:1.58; color:var(--ink); }
+.congrats-body b{ font-weight:700; }
+.congrats-body .q{ font-style:italic; color:var(--coral); font-weight:500; }
+@media (max-width:900px){ .bt-grid{ grid-template-columns:1fr; gap:28px; } .bt{ padding:64px 0; } .congrats{ margin-bottom:24px; } }
 </style>
 </head>
 <body>
@@ -93,6 +101,11 @@ h1.hero-title .grad{
 
 <section class="hero">
   <div class="wrap">
+    
+<div class="congrats">
+  <div class="congrats-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="#D01840" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
+  <div class="congrats-body"><b>Congratulations, Chase.</b> On graduating the UW Foster Product Management Leadership Accelerator this week — <span class="q">"A little wiser. A little more purple."</span> You wrote that leadership scale comes from creating clarity, elevating the people around you, and being a multiplier — which is exactly what ProductCentral is built to do. Felt like the right moment to reach out.</div>
+</div>
     <span class="eyebrow">Personalized for ALSAC</span>
     <h1 class="hero-title">Kristin × <span class="grad">Chase</span> × ALSAC.</h1>
     <p class="hero-sub">At ALSAC — the fundraising and awareness engine behind St. Jude — you're modernizing the enterprise site platform, leading the AEM Cloud migration, and shaping the CDP profile strategy that turns supporter data into personalized engagement, all while keeping a C-suite aligned on one roadmap. <b>ProductCentral</b> is the operating layer beneath that work: every supporter signal and stakeholder input synthesized by AI, your Marketing Products portfolio — CDP, email, data activation, lead gen — connected to the systems you already run, and one source of truth so exec, product, and marketing see the same picture in real time. It's the surface mission-driven teams like World Central Kitchen and One Tree Planted use to turn strategy into measurable movement.</p>
